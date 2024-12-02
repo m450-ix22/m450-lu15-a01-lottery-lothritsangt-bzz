@@ -1,6 +1,7 @@
 {
   "files": [
-    "test_main.py"
+    "test_main.py",
+    "test_lottery.py"
   ],
   "ignore" : [],
   "max": 10

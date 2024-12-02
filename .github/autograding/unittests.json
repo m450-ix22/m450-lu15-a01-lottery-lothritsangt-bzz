@@ -16,5 +16,29 @@
     "function": "test_main_ticket",
     "timeout": 10,
     "points": 1
+  },
+  {
+    "name": "test_create_ticket_with_sufficient_balance",
+    "function": "test_create_ticket_with_sufficient_balance",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_create_ticket_with_insufficient_balance",
+    "function": "test_create_ticket_with_insufficient_balance",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_select_numbers",
+    "function": "test_select_numbers",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_print_ticket",
+    "function": "test_print_ticket",
+    "timeout": 10,
+    "points": 1
   }
 ]
