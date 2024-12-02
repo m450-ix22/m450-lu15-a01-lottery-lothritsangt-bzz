@@ -29,7 +29,7 @@ def test_create_ticket_with_insufficient_balance(capfd):
 
     assert person.balance == 1.00  # Balance remains unchanged
     captured = capfd.readouterr()  # Capture terminal output
-    assert "Zuwenig Guthaben" in captured.out
+    assert 'Zuwenig Guthaben' in captured.out
 
 
 @patch('lottery.read_int', side_effect=[5, 12, 23, 34, 41, 7, 3])  # Mock inputs
@@ -49,9 +49,9 @@ def test_print_ticket(capfd):
     captured = capfd.readouterr()  # Capture terminal output
     output = captured.out
     # Check if X and numbers appear in the correct places
-    assert "   X" in output
-    assert "   1" not in output  # The chosen numbers should not be displayed
-    assert "Jokerzahl:  3" in output
+    assert '   X' in output
+    assert '   1' not in output  # The chosen numbers should not be displayed
+    assert 'Jokerzahl:  3' in output
 
 
 if __name__ == '__main__':
