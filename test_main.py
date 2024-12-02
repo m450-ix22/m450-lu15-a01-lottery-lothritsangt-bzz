@@ -1,9 +1,16 @@
+"""
+Module for testing main functionalities.
+"""
+
 import pytest
 
 import main
+
+
 @pytest.fixture
 def mock_functions(monkeypatch):
     """Monkeypatch to replace the functions 'login', 'transfer_money', 'select_menu' and 'create_ticket' in main"""
+
     def dummy_login():
         """Dummy function to replace the function 'login' in main"""
         pass
@@ -25,6 +32,7 @@ def mock_functions(monkeypatch):
     monkeypatch.setattr(main, 'transfer_money', dummy_transfer)
     monkeypatch.setattr(main, 'select_menu', dummy_select_menu)
     monkeypatch.setattr(main, 'create_ticket', dummy_ticket)
+
 
 def test_main_exit(capsys, monkeypatch, mock_functions):
     """Test the main function with the exit option"""
