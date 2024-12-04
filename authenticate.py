@@ -4,15 +4,20 @@ from person import Person
 def login():
     people_list = load_people()
     person = None
+    attempts = 0
     while person is None:
         password = input('Passwort > ')
         for temp in people_list:
             if temp.password == password:
                 person = temp
                 break
-            else:
-                print('Passwort falsch')
 
+        print('Passwort falsch. Versuch: ' + str(attempts + 1))
+        attempts += 1
+
+        if attempts == 3:
+            print('Zu viele Versuche. Programm wird beendet.')
+            exit(1)
     return person
 
 
